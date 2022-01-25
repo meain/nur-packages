@@ -12,8 +12,7 @@ jobs:
           fetch-depth: 0
       - name: Update packages
         run: |
-          echo fluent-theme gh-issues-to-rss gloc nn quickserve steal-my-focus toffee tojson traffic |
-            xargs -L1 ./_scripts/autoupdate
+          echo fluent-theme gh-issues-to-rss gloc nn quickserve steal-my-focus toffee tojson traffic | xargs -L1 ./_scripts/autoupdate
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
