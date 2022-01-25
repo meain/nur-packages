@@ -12,6 +12,7 @@ skipupdate=0
 package="$1"
 file="pkgs/$package/default.nix"
 
+echo -e "\n\n[] updating $package"
 if ! grep -q 'fetchFromGitHub' "$file"; then
 	echo "We don't really know how to update this as the source is not from Github"
 	exit 1
