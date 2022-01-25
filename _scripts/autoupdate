@@ -12,7 +12,7 @@ skipupdate=0
 package="$1"
 file="pkgs/$package/default.nix"
 
-printf "\n\n[] updating %s" "$package"
+printf "\n\n[] updating %s\n" "$package"
 if ! grep -q 'fetchFromGitHub' "$file"; then
 	echo "We don't really know how to update this as the source is not from Github"
 	exit 1
@@ -28,7 +28,7 @@ if [ "$skipupdate" -ne 1 ]; then
 	release_url="$(echo $github_url | sed 's|github.com|api.github.com/repos|;s|$|/releases/latest|')"
 	cversion="$(grep -E "version[^=]*=[^\"]*\"[^\"]*\"" "$file" | sed "s|.*version[^=]*=[^\"]*\"\([^\"]*\)\".*|\1|")"
 	lversion="$(curl --silent "$release_url" | tee /tmp/autoupdate-curl | jq -er .tag_name | sed 's/^[vV]//')"
-    [ "$lversion" = "null"] && echo "Unable to fetch latest version" && exit 1
+    [ "$lversion" = "null" ] && echo "Unable to fetch latest version" && exit 1
 	echo Current: "$cversion" '|' Latest: $lversion
 	if [ "$lversion" = "$cversion" ]; then
 		echo "Already on latest release, not upgrading" && exit 0
@@ -42,9 +42,10 @@ sed -i 's|"sha256[:-][^"]*"|lib.fakeSha256|' "$file"
 while ! nix-build -A "$package" 2>/tmp/nix-build-log; do
 	newsha="$(grep "            got:    sha256-" /tmp/nix-build-log | awk -F' ' '{print $NF}')"
 	echo "- using: $newsha"
+    [ -z $newsha ] && exit 1
 	sed -i "0,/lib.fakeSha256/s|lib.fakeSha256|\"$newsha\"|1" "$file"
 done
 
 git config --global user.email "bot@meain.io"
 git config --global user.name "Bot"
-git add -u && git commit -m "$package: $cversion -> $lversion"
+git add "pkg/$package" && git commit -m "$package: $cversion -> $lversion"
