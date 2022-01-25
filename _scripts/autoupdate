@@ -28,6 +28,7 @@ if [ "$skipupdate" -ne 1 ]; then
 	release_url="$(echo $github_url | sed 's|github.com|api.github.com/repos|;s|$|/releases/latest|')"
 	cversion="$(grep -E "version[^=]*=[^\"]*\"[^\"]*\"" "$file" | sed "s|.*version[^=]*=[^\"]*\"\([^\"]*\)\".*|\1|")"
 	lversion="$(curl --silent "$release_url" | tee /tmp/autoupdate-curl | jq -er .tag_name | sed 's/^[vV]//')"
+    [ "$lversion" = "null"] && echo "Unable to fetch latest version" && exit 1
 	echo Current: "$cversion" '|' Latest: $lversion
 	if [ "$lversion" = "$cversion" ]; then
 		echo "Already on latest release, not upgrading" && exit 0
