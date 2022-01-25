@@ -3,7 +3,7 @@
 # A super hacky script to update nix package to latest Github version
 # If it is hacky but works, is it really hacky?
 
-set -euo pipefail
+set -eu
 
 skipupdate=0
 [ "$1" = "--skip-update" ] && shift && skipupdate=1
@@ -37,7 +37,7 @@ fi
 
 # update computed sha values
 sed -i 's|"sha256[:-][^"]*"|lib.fakeSha256|' "$file"
-while ! nix-build -A "$package" 2>&1 | tee /tmp/nix-build-log; do
+while ! nix-build -A "$package" 2>/tmp/nix-build-log; do
 	newsha="$(grep "            got:    sha256-" /tmp/nix-build-log | awk -F' ' '{print $NF}')"
 	echo -e "\n\n\t\t [[ Using: $newsha ]]\n\n"
 	sed -i "0,/lib.fakeSha256/s|lib.fakeSha256|\"$newsha\"|1" "$file"
