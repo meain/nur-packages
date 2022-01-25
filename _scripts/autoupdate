@@ -48,4 +48,4 @@ done
 
 git config --global user.email "bot@meain.io"
 git config --global user.name "Bot"
-git add "pkg/$package" && git commit -m "$package: $cversion -> $lversion"
+git add "pkgs/$package" && git commit -m "$package: $cversion -> $lversion"
