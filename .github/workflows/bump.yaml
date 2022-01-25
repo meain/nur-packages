@@ -24,6 +24,7 @@ jobs:
           tr ' ' '\n' | shuf | xargs -L1 ./_scripts/autoupdate
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
+        if: always()
         with:
           commit-message: Update packages
           title: Update packages
