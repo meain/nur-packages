@@ -45,4 +45,6 @@ while ! nix-build -A "$package" 2>/tmp/nix-build-log; do
 	sed -i "0,/lib.fakeSha256/s|lib.fakeSha256|\"$newsha\"|1" "$file"
 done
 
+git config --global user.email "bot@meain.io"
+git config --global user.name "Bot"
 git add -u && git commit -m "$package: $cversion -> $lversion"
