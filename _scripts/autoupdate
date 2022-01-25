@@ -3,7 +3,7 @@
 # A super hacky script to update nix package to latest Github version
 # If it is hacky but works, is it really hacky?
 
-set -eo pipefail
+set -euo pipefail
 
 skipupdate=0
 [ "$1" = "--skip-update" ] && shift && skipupdate=1
