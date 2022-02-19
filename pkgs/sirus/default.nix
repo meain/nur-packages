@@ -2,13 +2,13 @@
 
 buildGoModule rec {
   pname = "sirus";
-  version = "0.0.6";
+  version = "0.0.7";
 
   src = fetchFromGitHub {
     owner = "meain";
     repo = "${pname}";
     rev = "${version}";
-    sha256 = "sha256-3P70Mpe7gfuJxsuqMFet4vizD3bBhiRQ4bfRJhoi3vU=";
+    sha256 = "sha256-0cyxl8TqKLZsTm2ead9u7fNM3ExvP+uCbF/bnLmqAxE=";
   };
 
   vendorSha256 = "sha256-9+ph6dI+Fjhde5wxo7saW9/tZUZdIIXlE0X1MGqrPbw=";
