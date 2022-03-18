@@ -18,7 +18,7 @@ buildGo117Module rec {
     sha256 = "sha256-8TtGPBQdNIuGhKFDhL2AGCmLodSkcB6uCVWOlnFmLHQ=";
   };
 
-  vendorSha256 = "sha256-0eKfLpzknMTV75cEnPxXchBng+MVbqPwjWT+ceUj7ck=";
+  vendorSha256 = "sha256-ulU7Cw+YEB1vigc/X0NyYTP/q1/X/f7pc9wNTvfiNLc=";
   subPackages = [ "protoc-gen-grpc-gateway" "protoc-gen-openapiv2" ];
 
   meta = with lib; {
