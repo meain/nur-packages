@@ -1,5 +1,5 @@
 { lib
-, buildGoModule
+, buildGo117Module
 , fetchFromGitHub
 , protobuf
 , git
@@ -7,7 +7,7 @@
 , buf
 }:
 
-buildGoModule rec {
+buildGo117Module rec {
   pname = "grpc-gateway";
   version = "2.9.0";
 
