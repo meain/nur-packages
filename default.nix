@@ -37,7 +37,6 @@
   golang-migrate-pg = pkgs.callPackage ./pkgs/golang-migrate { tags = [ "postgres" "file" ]; }; # with proper build tags
   prosemd-lsp = pkgs.callPackage ./pkgs/prosemd-lsp { };
   gcalendar = pkgs.python38.pkgs.callPackage ./pkgs/gcalendar { };
-  grpcurl = pkgs.python38.pkgs.callPackage ./pkgs/grpcurl { };
 
   ## programming
   # buf = pkgs.callPackage ./pkgs/buf {};
