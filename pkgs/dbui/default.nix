@@ -1,6 +1,6 @@
-{ lib, buildGoModule, fetchFromGitHub }:
+{ lib, buildGo116Module, fetchFromGitHub }:
 
-buildGoModule rec {
+buildGo116Module rec {
   pname = "dbui";
   version = "0.7.0";
   owner = "KenanBek";
@@ -12,7 +12,7 @@ buildGoModule rec {
     sha256 = "sha256-HBv+58uSPdNK8S41QuU8/Y3AbBEGdRntdRe4Pfy1GCo=";
   };
 
-  vendorSha256 = "sha256-lBbLrK5P5KrrOZAOLvGKBJyzSk3bINd8aNgHPMmOyEw=";
+  vendorSha256 = "sha256-Wbkj4JjEdg0Y1X1S9fVLyfZOAfz7r8cQWs84qiMQe4Q=";
   proxyVendor = true;
 
   meta = with lib; {
