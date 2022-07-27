@@ -38,6 +38,7 @@
   spaceman-diff = pkgs.callPackage ./pkgs/spaceman-diff { };
   dbui = pkgs.callPackage ./pkgs/dbui { };
   pulseaudio-virtualmic = pkgs.callPackage ./pkgs/pulseaudio-virtualmic { };
+  aw-watcher-mpd = pkgs.callPackage ./pkgs/aw-watcher-mpd { };
 
   ## programming
   # buf = pkgs.callPackage ./pkgs/buf {};
