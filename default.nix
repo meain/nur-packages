@@ -41,6 +41,7 @@
   dbui = pkgs.callPackage ./pkgs/dbui { };
   pulseaudio-virtualmic = pkgs.callPackage ./pkgs/pulseaudio-virtualmic { };
   aw-watcher-mpd = pkgs.callPackage ./pkgs/aw-watcher-mpd { };
+  aw-watcher-input = pkgs.callPackage ./pkgs/aw-watcher-input { };
 
   ## programming
   # buf = pkgs.callPackage ./pkgs/buf {};
