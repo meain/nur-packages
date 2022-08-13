@@ -1,4 +1,4 @@
-{ lib, poetry2nix, python37, fetchFromGitHub }:
+{ lib, poetry2nix, python39, fetchFromGitHub }:
 
 poetry2nix.mkPoetryApplication rec{
   pname = "aw-watcher-mpd";
@@ -27,7 +27,7 @@ poetry2nix.mkPoetryApplication rec{
       }
     );
   });
-  python = python37;
+  python = python39;
 
   meta = with lib; {
     homepage = "https://github.com/Kalelzar/aw-watcher-mpd";
