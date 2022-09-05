@@ -10,12 +10,12 @@
 
 stdenv.mkDerivation rec {
   pname = "activitywatch-bin";
-  version = "0.12.0";
+  version = "0.11.0";
 
   src = fetchzip {
     url =
       "https://github.com/ActivityWatch/activitywatch/releases/download/v${version}/activitywatch-v${version}-linux-x86_64.zip";
-    sha256 = "sha256-4lfUxJTBpjrsRO+pmW7DNKV69tMr2wiarA5Fy4wPgMk=";
+    sha256 = "sha256-CYLhSxlKMHuIEMmqtN8o/lhwTfcR+DInFxVjZOJ1fHc=";
   };
 
   nativeBuildInputs = [ autoPatchelfHook libGL freetype libdrm fontconfig ];
