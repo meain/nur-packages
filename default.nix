@@ -15,7 +15,7 @@
   overlays = import ./overlays; # nixpkgs overlays
 
   ## personal
-  traffic = pkgs.python38.pkgs.callPackage ./pkgs/traffic { };
+  traffic = pkgs.callPackage ./pkgs/traffic { };
   gh-issues-to-rss = pkgs.callPackage ./pkgs/gh-issues-to-rss { };
   tojson = pkgs.callPackage ./pkgs/tojson { };
   toffee = pkgs.callPackage ./pkgs/toffee { };
