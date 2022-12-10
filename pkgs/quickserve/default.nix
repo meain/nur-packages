@@ -6,16 +6,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "quickserve";
-  version = "0.5.1";
+  version = "0.5.2";
 
   src = fetchFromGitHub {
     owner = "meain";
     repo = pname;
     rev = version;
-    sha256 = "sha256-ZPd/Oitph8C6t/bTjuRMgR7RnQ68TccE82C28KcdMpI=";
+    sha256 = "sha256-FIb3wkSkwR/TOuvOvLZDetOUabMp97E7Dt+6J0VhU8g=";
   };
 
-  cargoSha256 = "sha256-zVcJC2NHFVBVXiqWtL813txWK8UIEiFsKCPLnS9SvAg=";
+  cargoSha256 = "sha256-JdZfQPNy6lZocottRxahh5we2jc76diQahaX+YQProw=";
 
   doInstallCheck = true;
 
