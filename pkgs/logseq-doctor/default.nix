@@ -24,6 +24,10 @@ python3.pkgs.buildPythonApplication rec {
     mistletoe
   ];
 
+  postInstall = ''
+    mv $out/bin/lsd $out/bin/logseq-doctor
+  '';
+
   meta = with lib; {
     description = "Heal your Markdown files: convert to outline, list tasks and more tools to come";
     homepage = "https://github.com/andreoliwa/logseq-doctor";
@@ -32,3 +36,4 @@ python3.pkgs.buildPythonApplication rec {
     maintainers = with maintainers; [ meain ];
   };
 }
+
