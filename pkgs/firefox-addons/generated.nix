@@ -88,6 +88,25 @@
         platforms = platforms.all;
         };
       };
+    "global-speed" = buildFirefoxXpiAddon {
+      pname = "global-speed";
+      version = "2.9.9971";
+      addonId = "{f4961478-ac79-4a18-87e9-d2fb8c0442c4}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4193461/global_speed-2.9.9971.xpi";
+      sha256 = "9a18f0a7b356607e37a321578873bb277b0a9f2f3d937805b8e4b1100192592a";
+      meta = with lib;
+      {
+        description = "Set a default speed for video and audio.";
+        mozPermissions = [
+          "storage"
+          "https://*/*"
+          "http://*/*"
+          "file://*/*"
+          "webNavigation"
+          ];
+        platforms = platforms.all;
+        };
+      };
     "mastodon4-redirect" = buildFirefoxXpiAddon {
       pname = "mastodon4-redirect";
       version = "1.4";
