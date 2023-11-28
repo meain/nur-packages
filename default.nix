@@ -52,4 +52,7 @@
 
   ## fonts
   victor-mono-nf = pkgs.callPackage ./pkgs/victor-mono-nf { }; # nerd-font version of victor mono
+
+  # firefox extensions
+  firefox-addons = pkgs.recurseIntoAttrs (pkgs.callPackage ./pkgs/firefox-addons { });
 }
