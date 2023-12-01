@@ -9,7 +9,12 @@
       meta = with lib;
       {
         description = "Dogs have Owners, Cats have Staff.\n~ Unknown Source\n\nTAGS\ngallery gray cuddly cute black kitten feline domesticated animal love furry friend pets animated png animated ears &amp; tail walking paw prints footer whiskers\n\n=^..^=  \n(\") (\") SaSSyGirL";
-        license = licenses.cc-by-sa-30;
+        license = {
+          shortName = "allrightsreserved";
+          fullName = "All Rights Reserved";
+          url = "https://addons.mozilla.org/en-US/firefox/addon/animated-kitty-cat/";
+          free = false;
+          };
         mozPermissions = [];
         platforms = platforms.all;
         };
@@ -97,6 +102,12 @@
       meta = with lib;
       {
         description = "Set a default speed for video and audio.";
+        license = {
+          shortName = "allrightsreserved";
+          fullName = "All Rights Reserved";
+          url = "https://github.com/polywock/globalSpeed/issues/247";
+          free = false;
+          };
         mozPermissions = [
           "storage"
           "https://*/*"
@@ -191,6 +202,28 @@
         description = "Modify a web page to make it more readable by bolding the beginning of a word (like bionic reading).";
         license = licenses.mpl20;
         mozPermissions = [ "<all_urls>" "http://*/*" "https://*/*" ];
+        platforms = platforms.all;
+        };
+      };
+    "try-another-search-engine" = buildFirefoxXpiAddon {
+      pname = "try-another-search-engine";
+      version = "0.9.1";
+      addonId = "{14c48e36-100d-4d9b-a11a-890112654de9}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/3980199/try_another_search_engine-0.9.1.xpi";
+      sha256 = "02adb5b8dba750b4bff1d10d5a024ca4c97d1882966268abaf7af1c79f42f781";
+      meta = with lib;
+      {
+        description = "Allows quick cycling through predefined search engines (Seznam 🐶, Google, Bing &amp; DuckDuckGo 🦆) results\n\nCollects anonymous data about switching search engines. This behaviour can be turned off.";
+        license = licenses.mpl20;
+        mozPermissions = [
+          "storage"
+          "*://search.seznam.cz/*"
+          "*://www.bing.com/*"
+          "*://www.obrazky.cz/*"
+          "*://www.google.com/*"
+          "*://www.google.cz/*"
+          "*://duckduckgo.com/*"
+          ];
         platforms = platforms.all;
         };
       };
