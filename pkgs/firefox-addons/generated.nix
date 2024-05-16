@@ -44,10 +44,10 @@
     };
     "awesome-rss" = buildFirefoxXpiAddon {
       pname = "awesome-rss";
-      version = "1.3.5";
+      version = "1.3.6resigned1";
       addonId = "{97d566da-42c5-4ef4-a03b-5a2e5f7cbcb2}";
-      url = "https://addons.mozilla.org/firefox/downloads/file/1124727/awesome_rss-1.3.5.xpi";
-      sha256 = "fc3c62532d6462bc269f6ea9fa61bbcadc898bdafcf66e16e15bec66bb094d9b";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4272927/awesome_rss-1.3.6resigned1.xpi";
+      sha256 = "383981387b37cba3ba1931235dfa58cb8b76ec7dff6195d1adbfde221a26c36b";
       meta = with lib;
       {
         description = "Puts an RSS/Atom subscribe button back in URL bar.\n\nSupports \"Live Bookmarks\" (built-in), Feedly, &amp; Inoreader";
@@ -118,6 +118,47 @@
         platforms = platforms.all;
       };
     };
+    "markdown-viewer-webext" = buildFirefoxXpiAddon {
+      pname = "markdown-viewer-webext";
+      version = "1.8.1";
+      addonId = "{943b8007-a895-44af-a672-4f4ea548c95f}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/3894829/markdown_viewer_webext-1.8.1.xpi";
+      sha256 = "fc9b61a9a55d96c71606272d91fe3e3b675e3392c50658686c928a740129d959";
+      meta = with lib;
+      {
+        homepage = "https://github.com/Cimbali/markdown-viewer";
+        description = "Displays markdown documents beautified in your browser.";
+        license = licenses.mit;
+        mozPermissions = [
+          "storage"
+          "*://*/*.markdown"
+          "*://*/*.md"
+          "*://*/*.mdown"
+          "*://*/*.mdwn"
+          "*://*/*.mkd"
+          "*://*/*.mkdn"
+          "*://*/*.MARKDOWN"
+          "*://*/*.MD"
+          "*://*/*.MDOWN"
+          "*://*/*.MDWN"
+          "*://*/*.MKD"
+          "*://*/*.MKDN"
+          "file://*/*.markdown"
+          "file://*/*.MARKDOWN"
+          "file://*/*.md"
+          "file://*/*.MD"
+          "file://*/*.mdown"
+          "file://*/*.MDOWN"
+          "file://*/*.mdwn"
+          "file://*/*.MDWN"
+          "file://*/*.mkd"
+          "file://*/*.MKD"
+          "file://*/*.mkdn"
+          "file://*/*.MKDN"
+        ];
+        platforms = platforms.all;
+      };
+    };
     "mastodon4-redirect" = buildFirefoxXpiAddon {
       pname = "mastodon4-redirect";
       version = "1.4";
@@ -149,14 +190,14 @@
     };
     "netflix-prime-auto-skip" = buildFirefoxXpiAddon {
       pname = "netflix-prime-auto-skip";
-      version = "1.0.96";
+      version = "1.1.10";
       addonId = "NetflixPrime@Autoskip.io";
-      url = "https://addons.mozilla.org/firefox/downloads/file/4251264/netflix_prime_auto_skip-1.0.96.xpi";
-      sha256 = "ba753df31cfb53115c7927340e84e8d1cba4ec98b471f27657d9307ddc0f0517";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4287801/netflix_prime_auto_skip-1.1.10.xpi";
+      sha256 = "374c3c9c5bd0b555d4e980d41a73bb362c42d6ea9a446613adafc0275097d689";
       meta = with lib;
       {
         homepage = "https://github.com/Dreamlinerm/Netflix-Prime-Auto-Skip";
-        description = "Automatically skip Ads, Intros, Recaps, Credits and add Speed Control, etc. on Netflix, Prime video, Disney+ &amp; Hotstar and Crunchyroll.";
+        description = "Automatically skip Ads, Intros, Credits and add Speed Control, etc. on Netflix, Prime video, Disney+, Crunchyroll and HBO max.";
         license = licenses.gpl3;
         mozPermissions = [
           "storage"
@@ -169,6 +210,8 @@
           "*://*.amazon.co.jp/*"
           "*://*.amazon.de/*"
           "*://*.amazon.co.uk/*"
+          "*://*.max.com/*"
+          "*://*.hbomax.com/*"
           "*://*.netflix.com/*"
           "*://*.netflix.ca/*"
           "*://*.netflix.com.au/*"
