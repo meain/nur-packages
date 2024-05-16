@@ -56,6 +56,37 @@
         platforms = platforms.all;
       };
     };
+    "aws-sso-containers" = buildFirefoxXpiAddon {
+      pname = "aws-sso-containers";
+      version = "1.8";
+      addonId = "{5c474add-03f0-4c67-9479-f32939d7599a}";
+      url = "https://addons.mozilla.org/firefox/downloads/file/4256287/aws_sso_containers-1.8.xpi";
+      sha256 = "0b31b7b4bb470bc31d5596a4656684e0039a32f6b68f4f4c0cd07a6092f0a715";
+      meta = with lib;
+      {
+        homepage = "https://github.com/pyro2927/AWS_SSO_Containers";
+        description = "Automatically places AWS SSO accounts into containers.";
+        license = licenses.mit;
+        mozPermissions = [
+          "activeTab"
+          "tabs"
+          "cookies"
+          "contextualIdentities"
+          "storage"
+          "webRequest"
+          "webRequestBlocking"
+          "https://signin.aws.amazon.com/saml"
+          "https://*.awsapps.com/start/*"
+          "https://*.amazonaws.com/federation/console?*"
+          "https://*.amazonaws-us-gov.com/federation/console?*"
+          "https://*.amazonaws.cn/federation/console?*"
+          "https://*.amazonaws.com/federation/instance/appinstances"
+          "https://*.amazonaws-us-gov.com/federation/instance/appinstances"
+          "https://*.amazonaws.cn/federation/instance/appinstances"
+        ];
+        platforms = platforms.all;
+      };
+    };
     "containerise" = buildFirefoxXpiAddon {
       pname = "containerise";
       version = "3.9.0";
