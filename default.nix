@@ -53,6 +53,7 @@ in
   # logseq-doctor = pkgs.callPackage ./pkgs/logseq-doctor { };
   # fabric = pkgs.callPackage ./pkgs/fabric { };
   aider-chat = pkgs.callPackage ./pkgs/aider { };
+  prr = pkgs.callPackage ./pkgs/prr { };
 
   # Run nvfetcher in the haskellPackages directory to update sources
   # haskellPackages = callPackages ./pkgs/haskellPackages;
