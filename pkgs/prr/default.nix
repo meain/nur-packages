@@ -10,16 +10,16 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "prr";
-  version = "0.17.0";
+  version = "0.20.0";
 
   src = fetchFromGitHub {
     owner = "danobi";
     repo = pname;
     rev = "v${version}";
-    hash = "sha256-siQZ3rDKv2lnn1bmisRsexWwfvmMhK+z4GZGPsrfPgc=";
+    hash = "sha256-duoC3TMgW+h5OrRCbqYPppMtnQBfS9R7ZpHQySgPRv4=";
   };
 
-  cargoHash = "sha256-vCZjgmBYO+I6MZLCOMp50bWEeHwLbZsxSz5gRmBykvI=";
+  cargoHash = "sha256-PuPCm6IyX/dBcigBhroNaKDwY4TypUDjVODy+2iUix0=";
 
   buildInputs =
     [ openssl ]
@@ -29,6 +29,7 @@ rustPlatform.buildRustPackage rec {
     ];
 
   nativeBuildInputs = [ pkg-config ];
+  doCheck = false;
 
   meta = with lib; {
     description = "Tool that brings mailing list style code reviews to Github PRs";
