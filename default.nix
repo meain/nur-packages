@@ -55,6 +55,7 @@ in
   aider-chat = pkgs.callPackage ./pkgs/aider { };
   prr = pkgs.callPackage ./pkgs/prr { };
   html-to-markdown = pkgs.callPackage ./pkgs/html-to-markdown { };
+  probe = pkgs.callPackage ./pkgs/probe { };
 
   # Run nvfetcher in the haskellPackages directory to update sources
   # haskellPackages = callPackages ./pkgs/haskellPackages;
