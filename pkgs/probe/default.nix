@@ -10,13 +10,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "probe";
-  version = "0.3.4";
+  version = "0.6.0-rc31";
 
   src = fetchFromGitHub {
     owner = "buger";
     repo = "probe";
     rev = "v${version}";
-    hash = "sha256-e5VSkgcwl8+YufIjC/ylK3nOOgwTD2Ho1yJkuX3jlTg=";
+    hash = "sha256-q+1PML9uxZD/pBlek0t+NuU46LohOO3r2NfT4nhYTBI=";
   };
 
   cargoLock = {
@@ -24,7 +24,7 @@ rustPlatform.buildRustPackage rec {
   };
 
   postPatch = ''
-    ln -s ${./Cargo.lock} Cargo.lock
+    ln -s ${cargoLock.lockFile} Cargo.lock
   '';
 
   nativeBuildInputs = [
