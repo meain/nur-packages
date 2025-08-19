@@ -6,13 +6,13 @@
 
 buildGoModule rec {
   pname = "esa";
-  version = "0.2.0";
+  version = "0.3.0";
 
   src = fetchFromGitHub {
     owner = "meain";
     repo = "esa";
     rev = "v${version}";
-    hash = "sha256-MZRtw9nVnAw6GGVwfujdMpjwFB+h/n8CXWwlFPqz77g=";
+    hash = "sha256-u3XuOwaxg29ecJo7+vyzl2Z3Jx2XnLGvxC+mE7S81n4=";
   };
 
   vendorHash = "sha256-qoFxm5sNHBOnm10kZsbnMVf+R5BpvjivqHpHTCvFVXA=";
