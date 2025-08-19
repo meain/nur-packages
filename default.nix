@@ -33,6 +33,7 @@ in
   sirus = pkgs.callPackage ./pkgs/sirus { };
   mmm = pkgs.callPackage ./pkgs/mmm { };
   chainlink = pkgs.callPackage ./pkgs/chainlink { };
+  esa = pkgs.callPackage ./pkgs/esa { };
 
   ## external
   # fluent-theme = pkgs.callPackage ./pkgs/fluent-theme { };
