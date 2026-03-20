@@ -60,6 +60,7 @@ in
   html-to-markdown = pkgs.callPackage ./pkgs/html-to-markdown { };
   defuddle = pkgs.callPackage ./pkgs/defuddle { };
   probe = pkgs.callPackage ./pkgs/probe { };
+  confluence-cli = pkgs.callPackage ./pkgs/confluence-cli { };
 
   # Run nvfetcher in the haskellPackages directory to update sources
   # haskellPackages = callPackages ./pkgs/haskellPackages;
