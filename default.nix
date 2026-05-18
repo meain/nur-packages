@@ -55,7 +55,7 @@ in
   # chatgpt-cli = pkgs.callPackage ./pkgs/chatgpt-cli { };
   # logseq-doctor = pkgs.callPackage ./pkgs/logseq-doctor { };
   # fabric = pkgs.callPackage ./pkgs/fabric { };
-  hunk = pkgs.callPackage ./pkgs/hunk { };
+  # hunk is provided via flake input (see flake.nix)
   prr = pkgs.callPackage ./pkgs/prr { };
   html-to-markdown = pkgs.callPackage ./pkgs/html-to-markdown { };
   defuddle = pkgs.callPackage ./pkgs/defuddle { };
