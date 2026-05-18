@@ -6,13 +6,13 @@
 
 rustPlatform.buildRustPackage rec {
   pname = "hunk";
-  version = "0-unstable-2026-05-08";
+  version = "0-unstable-2026-05-17";
 
   src = fetchFromGitHub {
     owner = "modem-dev";
     repo = "hunk";
-    rev = "4d57b2716af7009a5d6087313e0035c836afeeae";
-    hash = "sha256-P5omqf8TeCLDj6lAN1IZkiaDnx60yvJZPTkYsEb7l00=";
+    rev = "9b01f128976e2c2aa65e31c19967516260ff9b6f";
+    hash = "sha256-aA3OenH6SBk1T+s/eJK1x2CbSIhndc2e+Cow1i2xntI=";
   };
 
   cargoHash = lib.fakeHash;
