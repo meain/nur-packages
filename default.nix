@@ -40,6 +40,7 @@ in
   ## external
   # fluent-theme = pkgs.callPackage ./pkgs/fluent-theme { };
   kmonad = pkgs.callPackage ./pkgs/kmonad { };
+  stochos = pkgs.callPackage ./pkgs/stochos { };
   # warpd = pkgs.callPackage ./pkgs/warpd { };
   # otrecorder = pkgs.callPackage ./pkgs/otrecorder { }; # owntracks-recorder
   # owntracks-frontend = pkgs.callPackage ./pkgs/owntracks-frontend { };
